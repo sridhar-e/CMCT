@@ -3,16 +3,26 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Heart, Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
+import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const Footer = () => {
+  const logo = PlaceHolderImages.find(img => img.id === 'app-logo');
+
   return (
     <footer className="bg-foreground text-background pt-20 pb-10 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
         <div className="space-y-6">
           <Link href="/" className="flex items-center gap-2">
-            <div className="bg-primary p-1.5 rounded-lg">
-              <Heart className="w-6 h-6 text-foreground fill-current" />
+            <div className="relative w-12 h-12 overflow-hidden rounded-lg">
+              <Image 
+                src={logo?.imageUrl || '/cmct-logo.png'} 
+                alt={logo?.description || 'CMCT Logo'} 
+                fill 
+                className="object-contain"
+                data-ai-hint={logo?.imageHint}
+              />
             </div>
             <span className="font-headline font-bold text-2xl tracking-tight">
               CMCT <span className="text-accent">Compass</span>

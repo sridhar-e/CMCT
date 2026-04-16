@@ -3,13 +3,16 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Heart } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const logo = PlaceHolderImages.find(img => img.id === 'app-logo');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,8 +38,15 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="bg-primary p-1.5 rounded-lg group-hover:scale-110 transition-transform">
-            <Heart className="w-6 h-6 text-foreground fill-current" />
+          <div className="relative w-10 h-10 group-hover:scale-110 transition-transform overflow-hidden rounded-lg">
+            <Image 
+              src={logo?.imageUrl || '/cmct-logo.png'} 
+              alt={logo?.description || 'CMCT Logo'} 
+              fill 
+              className="object-contain"
+              priority
+              data-ai-hint={logo?.imageHint}
+            />
           </div>
           <span className="font-headline font-bold text-xl tracking-tight text-foreground">
             CMCT <span className="text-accent">Compass</span>
