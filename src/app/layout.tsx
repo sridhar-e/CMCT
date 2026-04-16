@@ -1,9 +1,8 @@
-
 import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'CMCT Compass | Modern Christian Missions Charitable Trust',
+  title: 'CHRISTIAN MISSIONS CHARITABLE TRUST | CHILD EDUCATION | HEALTH CARE ORGANIZATIONS',
   description: 'Transforming lives through compassion, education, and hope.',
 };
 
