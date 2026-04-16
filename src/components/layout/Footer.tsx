@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -24,9 +23,6 @@ const Footer = () => {
                 data-ai-hint={logo?.imageHint}
               />
             </div>
-            <span className="font-headline font-bold text-2xl tracking-tight">
-              CMCT <span className="text-accent">Compass</span>
-            </span>
           </Link>
           <p className="text-muted-foreground leading-relaxed">
             Transforming lives through compassion and practical service since 1974. A globally recognized charitable trust.

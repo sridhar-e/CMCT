@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -48,9 +47,6 @@ const Navbar = () => {
               data-ai-hint={logo?.imageHint}
             />
           </div>
-          <span className="font-headline font-bold text-xl tracking-tight text-foreground">
-            CMCT <span className="text-accent">Compass</span>
-          </span>
         </Link>
 
         {/* Desktop Nav */}
