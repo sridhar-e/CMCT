@@ -57,13 +57,19 @@ const Programs = () => {
           {programs.map((program, idx) => (
             <div key={idx} className="group relative bg-white rounded-[2rem] overflow-hidden shadow-sm border hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
               <div className="aspect-video relative overflow-hidden">
-                <Image 
-                  src={program.image || ''} 
-                  alt={program.title} 
-                  fill 
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  data-ai-hint={program.hint}
-                />
+                {program.image ? (
+                  <Image 
+                    src={program.image} 
+                    alt={program.title} 
+                    fill 
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    data-ai-hint={program.hint}
+                  />
+                ) : (
+                  <div className="w-full h-full bg-muted flex items-center justify-center">
+                    <span className="text-muted-foreground text-xs">Image unavailable</span>
+                  </div>
+                )}
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg">
                   {program.icon}
                 </div>
