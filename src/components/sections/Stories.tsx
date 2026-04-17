@@ -12,31 +12,31 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 const Stories = () => {
   const stories = [
     {
-      id: "story-1",
+      id: "story-muthu",
+      category: "Vocation",
+      date: "Feb 15, 2024",
+      title: "Not just surviving, but thriving: Muthu’s story",
+      desc: "When Muthu got his job as a waiter at a restaurant in Kanchipuram, he was ecstatic. It was what he had always wanted to do.",
+      image: "https://picsum.photos/seed/muthu/800/600",
+      hint: "vocational success"
+    },
+    {
+      id: "story-sheeba",
       category: "Education",
-      date: "Oct 12, 2023",
-      title: "Dreams Beyond the Slums: Ananya's Academic Triumph",
-      desc: "How a small scholarship changed the trajectory of a young girl's life in Chennai.",
+      date: "Jan 28, 2024",
+      title: "A Childhood to Remember: Sheeba’s story",
+      desc: "As Sheeba effortlessly handles her mathematics class at Bethany Secondary School, clarifying concepts and ironing out difficulties for her students.",
       image: PlaceHolderImages.find(img => img.id === 'story-1')?.imageUrl || "https://picsum.photos/seed/story1/800/600",
-      hint: "child education"
+      hint: "teacher education"
     },
     {
-      id: "story-2",
-      category: "Empowerment",
-      date: "Nov 05, 2023",
-      title: "The Loom of Hope: Women Reviving Traditional Crafts",
-      desc: "Our vocational program helps 50+ women achieve financial independence through hand-weaving.",
+      id: "story-padmavathy",
+      category: "Livelihood",
+      date: "Mar 02, 2024",
+      title: "A grand pattern: Padmavathy’s story",
+      desc: "It’s a busy morning at Padmavathy’s house. Her husband quickly finishes his breakfast before rushing to start a day filled with purpose and hope.",
       image: PlaceHolderImages.find(img => img.id === 'story-2')?.imageUrl || "https://picsum.photos/seed/story2/800/600",
-      hint: "women empowerment"
-    },
-    {
-      id: "story-3",
-      category: "Healthcare",
-      date: "Dec 20, 2023",
-      title: "Healing Remote Corners: The Mobile Clinic Impact",
-      desc: "Reaching the unreachable with specialized medical care and life-saving treatments.",
-      image: PlaceHolderImages.find(img => img.id === 'story-3')?.imageUrl || "https://picsum.photos/seed/story3/800/600",
-      hint: "medical camp"
+      hint: "family livelihood"
     }
   ];
 
@@ -91,7 +91,7 @@ const Stories = () => {
                   <h4 className="text-2xl font-headline font-bold leading-tight group-hover:text-accent transition-colors">
                     {story.title}
                   </h4>
-                  <p className="text-muted-foreground leading-relaxed line-clamp-2">
+                  <p className="text-muted-foreground leading-relaxed line-clamp-3">
                     {story.desc}
                   </p>
                   <Button variant="link" className="p-0 h-auto font-black text-accent group/btn items-center flex gap-1">
