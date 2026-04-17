@@ -1,8 +1,72 @@
 
 "use client";
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Utensils, GraduationCap, UserCheck, Stethoscope } from 'lucide-react';
+
+const Counter = ({ value }: { value: string }) => {
+  const [count, setCount] = useState(0);
+  const countRef = useRef<HTMLHeadingElement>(null);
+  
+  // Parse numeric value and suffix (like + or ,)
+  const numericValue = parseInt(value.replace(/[,+]/g, ''));
+  const hasPlus = value.includes('+');
+  const hasComma = value.includes(',');
+
+  useEffect(() => {
+    let observer: IntersectionObserver;
+    let animationStarted = false;
+
+    const startAnimation = () => {
+      if (animationStarted) return;
+      animationStarted = true;
+      
+      let startTimestamp: number | null = null;
+      const duration = 2000; // 2 seconds animation
+
+      const step = (timestamp: number) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        
+        // Easing function for smoother finish
+        const easeOutQuad = (t: number) => t * (2 - t);
+        const currentCount = Math.floor(easeOutQuad(progress) * numericValue);
+        
+        setCount(currentCount);
+
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      };
+      window.requestAnimationFrame(step);
+    };
+
+    observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          startAnimation();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (countRef.current) {
+      observer.observe(countRef.current);
+    }
+
+    return () => observer?.disconnect();
+  }, [numericValue]);
+
+  const formattedCount = hasComma 
+    ? count.toLocaleString() 
+    : count.toString();
+
+  return (
+    <h4 ref={countRef} className="text-2xl md:text-3xl font-headline font-black tracking-tight">
+      {formattedCount}{hasPlus ? '+' : ''}
+    </h4>
+  );
+};
 
 const Impact = () => {
   const stats = [
@@ -14,7 +78,7 @@ const Impact = () => {
 
   return (
     <section className="py-24 yellow-gradient text-accent-foreground relative overflow-hidden">
-      {/* Background Decor - Preserving as requested */}
+      {/* Background Decor */}
       <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
           <path d="M0 0 L100 0 L100 100 Z" fill="white" />
@@ -44,7 +108,7 @@ const Impact = () => {
                 {stat.icon}
               </div>
               <div className="space-y-1">
-                <h4 className="text-2xl md:text-3xl font-headline font-black tracking-tight">{stat.value}</h4>
+                <Counter value={stat.value} />
                 <p className="font-bold text-accent-foreground/70 text-[10px] md:text-xs tracking-wide leading-tight px-2">{stat.label}</p>
               </div>
             </div>
