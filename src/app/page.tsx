@@ -4,6 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import Mission from '@/components/sections/Mission';
+import HowWeDoIt from '@/components/sections/HowWeDoIt';
 import Impact from '@/components/sections/Impact';
 import Gallery from '@/components/sections/Gallery';
 import Testimonials from '@/components/sections/Testimonials';
@@ -16,6 +17,7 @@ export default function Home() {
       <main className="flex-grow">
         <Hero />
         <Mission />
+        <HowWeDoIt />
         <Impact />
         <Gallery />
         <Testimonials />
