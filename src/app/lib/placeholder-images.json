@@ -32,6 +32,12 @@
       "imageHint": "food relief"
     },
     {
+      "id": "mission-focus",
+      "description": "Focused hands working together",
+      "imageUrl": "https://picsum.photos/seed/mission1/1200/800",
+      "imageHint": "unity cooperation"
+    },
+    {
       "id": "gallery-1",
       "description": "Community building project",
       "imageUrl": "https://picsum.photos/seed/gal1/800/600",
