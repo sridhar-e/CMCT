@@ -9,9 +9,9 @@
     },
     {
       "id": "hero-charity",
-      "description": "Children smiling in a community program",
-      "imageUrl": "https://picsum.photos/seed/cmct1/1920/1080",
-      "imageHint": "charity children"
+      "description": "CMCT Change Possible Banner",
+      "imageUrl": "/Possible-banner.png",
+      "imageHint": "charity banner"
     },
     {
       "id": "program-education",
