@@ -10,21 +10,18 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 const HowWeDoIt = () => {
   const steps = [
     {
-      number: "01",
       title: "Effective partnerships and networking",
       desc: "We work alongside a committed network of volunteers, like-minded NGOs and corporate houses to amplify our impact.",
       icon: <Handshake className="w-8 h-8 text-accent" />,
       image: PlaceHolderImages.find(img => img.id === 'strategy-1')?.imageUrl || "https://picsum.photos/seed/strat1/800/500",
     },
     {
-      number: "02",
       title: "Large local donor base",
       desc: "We constantly seek to engage and expand our donor base by innovating through technology and collaborating with multiple stakeholders.",
       icon: <Users className="w-8 h-8 text-accent" />,
       image: PlaceHolderImages.find(img => img.id === 'strategy-2')?.imageUrl || "https://picsum.photos/seed/strat2/800/500",
     },
     {
-      number: "03",
       title: "Building long-term sustainable models",
       desc: "We believe that true development lies in the hands of empowered beneficiaries. Projects include revenue-generation components.",
       icon: <RefreshCcw className="w-8 h-8 text-accent" />,
@@ -86,9 +83,6 @@ const HowWeDoIt = () => {
                     <div className="w-16 h-16 bg-[#fff9e6] rounded-full flex items-center justify-center shadow-inner">
                       {step.icon}
                     </div>
-                    <span className="text-4xl font-black text-[#f3f0e6] group-hover:text-accent/20 transition-colors">
-                      {step.number}
-                    </span>
                   </div>
                   
                   <div className="space-y-4">
