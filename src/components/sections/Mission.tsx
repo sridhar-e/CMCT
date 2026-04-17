@@ -13,28 +13,28 @@ const Mission = () => {
       title: "Eradication of extreme poverty and hunger",
       desc: "Ensuring no child goes to bed hungry through our community kitchens and nutritional supplements.",
       icon: <Utensils className="w-6 h-6" />,
-      image: "/poverty.jpeg",
+      image: "/Home/poverty.jpeg",
       hint: "poverty relief"
     },
     {
       title: "Access to education for all",
       desc: "Providing scholarships and school supplies to ensure every child gets the learning they deserve.",
       icon: <GraduationCap className="w-6 h-6" />,
-      image: "/education.jpg",
+      image: "/Home/education.jpg",
       hint: "education classroom"
     },
     {
       title: "Empowerment of women",
       desc: "Empowering adults through vocational training and self-help group initiatives.",
       icon: <Users className="w-6 h-6" />,
-      image: "/empowerment.jpg",
+      image: "/Home/empowerment.jpg",
       hint: "women empowerment"
     },
     {
       title: "Access to affordable healthcare",
       desc: "Operating mobile clinics and providing medical aid to remote villages lacking basic facilities.",
       icon: <Stethoscope className="w-6 h-6" />,
-      image: "/healthcare.jpg",
+      image: "/Home/healthcare.jpg",
       hint: "medical healthcare"
     }
   ];
