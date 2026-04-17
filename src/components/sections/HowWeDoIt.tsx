@@ -28,7 +28,7 @@ const HowWeDoIt = () => {
   ];
 
   return (
-    <section id="how-we-do-it" className="py-24 bg-white relative overflow-hidden">
+    <section id="how-we-do-it" className="py-24 bg-[#faf9f4] relative overflow-hidden">
       {/* Subtle background element */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full h-px bg-muted/30 z-0 hidden lg:block" />
 
