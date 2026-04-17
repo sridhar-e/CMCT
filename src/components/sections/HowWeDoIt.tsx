@@ -29,21 +29,19 @@ const HowWeDoIt = () => {
     }
   ];
 
-  const watermark = PlaceHolderImages.find(img => img.id === 'strategy-bg')?.imageUrl;
+  const watermark = "/Home/Strategy.png";
 
   return (
     <section id="how-we-do-it" className="py-24 bg-[#faf9f4] relative overflow-hidden">
-      {/* Background Watermark Image */}
+      {/* Background Image without overlay */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
-        {watermark && (
-          <Image 
-            src={watermark} 
-            alt="Background" 
-            fill 
-            className="object-cover" 
-            priority
-          />
-        )}
+        <Image 
+          src={watermark} 
+          alt="Background" 
+          fill 
+          className="object-cover" 
+          priority
+        />
       </div>
 
       {/* Subtle Dot Pattern */}
