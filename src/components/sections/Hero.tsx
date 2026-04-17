@@ -11,7 +11,7 @@ const Hero = () => {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-charity');
 
   return (
-    <section className="relative min-h-[85vh] flex items-center pt-24 pb-12 overflow-hidden bg-gradient-to-b from-[#fefce8] to-[#fcffe33b]">
+    <section className="relative min-h-[75vh] flex items-center pt-24 pb-12 overflow-hidden bg-gradient-to-b from-[#fefce8] to-[#fcffe33b]">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 -z-10 w-1/2 h-full opacity-10 blur-3xl pointer-events-none">
         <div className="w-full h-full bg-primary rounded-full translate-x-1/2 -translate-y-1/4" />
@@ -57,7 +57,7 @@ const Hero = () => {
         </div>
 
         <div className="relative animate-fade-in [animation-delay:200ms]">
-          <div className="aspect-[4/4.5] relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white group">
+          <div className="aspect-square relative rounded-[2rem] overflow-hidden shadow-2xl border-8 border-white group">
             {heroImage && (
               <Image 
                 src={heroImage.imageUrl} 
