@@ -3,7 +3,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Handshake, Users, RefreshCcw, Heart, ChevronRight, ArrowRight } from 'lucide-react';
+import { Handshake, Users, RefreshCcw, Heart, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
@@ -77,17 +77,6 @@ const HowWeDoIt = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 items-start relative">
-          {/* Connecting Lines and Arrows (Desktop Only) */}
-          <div className="hidden lg:block absolute top-[150px] left-[30%] w-[10%] border-t-2 border-dotted border-accent/40 z-20" />
-          <div className="hidden lg:flex absolute top-[138px] left-[32%] z-30 bg-accent w-8 h-8 rounded-full items-center justify-center text-white shadow-lg">
-            <ChevronRight className="w-5 h-5" />
-          </div>
-
-          <div className="hidden lg:block absolute top-[150px] left-[63%] w-[10%] border-t-2 border-dotted border-accent/40 z-20" />
-          <div className="hidden lg:flex absolute top-[138px] left-[65%] z-30 bg-accent w-8 h-8 rounded-full items-center justify-center text-white shadow-lg">
-            <ChevronRight className="w-5 h-5" />
-          </div>
-
           {steps.map((step, idx) => (
             <div key={idx} className="relative group">
               <Card className="border-none shadow-xl rounded-[3rem] bg-white overflow-hidden transition-all duration-500 hover:-translate-y-2 ring-1 ring-black/5">
