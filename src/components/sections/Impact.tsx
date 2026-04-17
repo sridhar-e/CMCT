@@ -2,15 +2,13 @@
 "use client";
 
 import React from 'react';
-import { Heart, Utensils, GraduationCap, Globe, Users, UserCheck, Stethoscope } from 'lucide-react';
+import { Utensils, GraduationCap, UserCheck, Stethoscope } from 'lucide-react';
 
 const Impact = () => {
   const stats = [
-    { label: "Donors' Countries", value: "25+", icon: <Globe className="w-8 h-8" /> },
-    { label: "Children Supported", value: "5,400+", icon: <Users className="w-8 h-8" /> },
-    { label: "Meals Served Daily", value: "2,000+", icon: <Utensils className="w-8 h-8" /> },
-    { label: "Children Educated", value: "2,700+", icon: <GraduationCap className="w-8 h-8" /> },
+    { label: "Meals Served Everyday", value: "2,000+", icon: <Utensils className="w-8 h-8" /> },
     { label: "Women Empowered", value: "680+", icon: <UserCheck className="w-8 h-8" /> },
+    { label: "Children Educated", value: "2,700+", icon: <GraduationCap className="w-8 h-8" /> },
     { label: "Patients Served", value: "300+", icon: <Stethoscope className="w-8 h-8" /> },
   ];
 
@@ -29,11 +27,11 @@ const Impact = () => {
             Our numbers tell a story of <span className="italic">Hope.</span>
           </h3>
           <p className="text-accent-foreground/80 max-w-2xl mx-auto font-medium">
-            Our donors across 25+ countries support over 5400+ children, making a tangible difference in every life we touch.
+            Every statistic represents a life changed and a future brightened through our collective efforts.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 text-center">
           {stats.map((stat, idx) => (
             <div key={idx} className="space-y-4 animate-fade-in" style={{ animationDelay: `${idx * 100}ms` }}>
               <div className="mx-auto w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg border border-white/30 hover:scale-110 transition-transform">
