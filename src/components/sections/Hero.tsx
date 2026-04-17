@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -10,7 +11,7 @@ const Hero = () => {
   const heroImage = PlaceHolderImages.find(img => img.id === 'hero-charity');
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-b from-[#fefce8] to-white">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 -z-10 w-1/2 h-full opacity-10 blur-3xl pointer-events-none">
         <div className="w-full h-full bg-primary rounded-full translate-x-1/2 -translate-y-1/4" />
