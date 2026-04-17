@@ -5,7 +5,6 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Mission from '@/components/sections/Mission';
-import Programs from '@/components/sections/Programs';
 import Impact from '@/components/sections/Impact';
 import Gallery from '@/components/sections/Gallery';
 import Testimonials from '@/components/sections/Testimonials';
@@ -20,7 +19,6 @@ export default function Home() {
         <About />
         <Mission />
         <Impact />
-        <Programs />
         <Gallery />
         <Testimonials />
         <CTA />

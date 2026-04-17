@@ -4,84 +4,96 @@
 import React from 'react';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { Sparkles, Globe, HeartHandshake } from 'lucide-react';
+import { Sparkles, GraduationCap, Stethoscope, Utensils, Users } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Mission = () => {
-  const missionImage = PlaceHolderImages.find(img => img.id === 'mission-focus');
+  const programs = [
+    {
+      title: "Education Support",
+      desc: "Providing scholarships and school supplies to ensure every child gets the learning they deserve.",
+      icon: <GraduationCap className="w-6 h-6" />,
+      image: PlaceHolderImages.find(i => i.id === 'program-education')?.imageUrl,
+      hint: "education classroom"
+    },
+    {
+      title: "Healthcare Services",
+      desc: "Operating mobile clinics and providing medical aid to remote villages lacking basic facilities.",
+      icon: <Stethoscope className="w-6 h-6" />,
+      image: PlaceHolderImages.find(i => i.id === 'program-health')?.imageUrl,
+      hint: "medical healthcare"
+    },
+    {
+      title: "Nutrition Programs",
+      desc: "Ensuring no child goes to bed hungry through our community kitchens and nutritional supplements.",
+      icon: <Utensils className="w-6 h-6" />,
+      image: PlaceHolderImages.find(i => i.id === 'program-food')?.imageUrl,
+      hint: "food relief"
+    },
+    {
+      title: "Community Growth",
+      desc: "Empowering adults through vocational training and self-help group initiatives.",
+      icon: <Users className="w-6 h-6" />,
+      image: "https://picsum.photos/seed/voca/600/400",
+      hint: "community training"
+    }
+  ];
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section id="mission" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative order-2 lg:order-1">
-            <div className="relative aspect-square md:aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl">
-              {missionImage && (
-                <Image
-                  src={missionImage.imageUrl}
-                  alt={missionImage.description}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={missionImage.imageHint}
-                />
-              )}
-            </div>
-            {/* Decorative elements */}
-            <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-primary/10 rounded-full -z-10 blur-3xl" />
-            <div className="absolute top-1/2 -left-12 transform -translate-y-1/2 bg-accent p-6 rounded-3xl shadow-xl hidden md:block">
-              <div className="flex items-center gap-4 text-foreground">
-                <Globe className="w-10 h-10" />
-                <div>
-                  <p className="text-2xl font-black">Global</p>
-                  <p className="text-sm font-semibold opacity-70 uppercase tracking-wider">Alignment</p>
-                </div>
-              </div>
-            </div>
+        {/* Header Block - Centered */}
+        <div className="max-w-3xl mx-auto text-center mb-20 space-y-6">
+          <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 rounded-full text-foreground font-bold text-sm tracking-wide">
+            <Sparkles className="w-4 h-4 text-accent" />
+            <span>OUR CORE MISSION</span>
           </div>
+          <h2 className="text-4xl md:text-6xl font-headline font-black text-foreground leading-tight">
+            Commitment to <br />
+            <span className="text-accent italic">Humanity.</span>
+          </h2>
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-medium">
+            We are actively involved in realizing the millennium development goals. We seek to serve the most vulnerable sections of society through…
+          </p>
+        </div>
 
-          <div className="space-y-10 order-1 lg:order-2">
-            <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 bg-secondary px-4 py-2 rounded-full text-foreground font-bold text-sm tracking-wide">
-                <Sparkles className="w-4 h-4 text-accent" />
-                <span>OUR CORE MISSION</span>
-              </div>
-              <h2 className="text-4xl md:text-6xl font-headline font-black text-foreground leading-tight">
-                Commitment to <br />
-                <span className="text-accent italic">Humanity.</span>
-              </h2>
-            </div>
-
-            <div className="space-y-6">
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-medium">
-                We are actively involved in realizing the millennium development goals. We seek to serve the most vulnerable sections of society through…
-              </p>
-              
-              <div className="grid gap-6 pt-4">
-                <div className="flex gap-6 items-start">
-                  <div className="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center shrink-0">
-                    <HeartHandshake className="w-6 h-6 text-accent" />
+        {/* How We Serve Cards Block */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {programs.map((program, idx) => (
+            <div key={idx} className="group relative bg-white rounded-[2rem] overflow-hidden shadow-sm border hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video relative overflow-hidden">
+                {program.image ? (
+                  <Image 
+                    src={program.image} 
+                    alt={program.title} 
+                    fill 
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    data-ai-hint={program.hint}
+                  />
+                ) : (
+                  <div className="w-full h-full bg-muted flex items-center justify-center">
+                    <span className="text-muted-foreground text-xs">Image unavailable</span>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-bold font-headline mb-2">Empowering the Vulnerable</h4>
-                    <p className="text-muted-foreground">Focusing on those who are often left behind by traditional development systems.</p>
-                  </div>
-                </div>
-                
-                <div className="flex gap-6 items-start">
-                  <div className="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center shrink-0">
-                    <Globe className="w-6 h-6 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold font-headline mb-2">Sustainable Development</h4>
-                    <p className="text-muted-foreground">Aligning local grassroots efforts with international standards for lasting impact.</p>
-                  </div>
+                )}
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg">
+                  {program.icon}
                 </div>
               </div>
+              <div className="p-8 space-y-4">
+                <h4 className="text-xl font-headline font-bold group-hover:text-accent transition-colors">{program.title}</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {program.desc}
+                </p>
+                <Button variant="link" className="p-0 h-auto font-bold text-accent">
+                  Learn More →
+                </Button>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default Mission;
