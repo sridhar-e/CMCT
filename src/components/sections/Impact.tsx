@@ -26,7 +26,7 @@ const Impact = () => {
         <div className="lg:w-2/5 space-y-6 text-center lg:text-left">
           <div className="space-y-2">
             <h2 className="text-accent-foreground/70 font-black uppercase tracking-[0.2em] text-xs">Global Impact</h2>
-            <h3 className="text-4xl md:text-5xl font-headline font-black text-accent-foreground leading-[1.1]">
+            <h3 className="text-[43px] font-headline font-black text-accent-foreground leading-[1.1]">
               Our numbers <br />
               tell a story of <span className="italic">Hope.</span>
             </h3>
