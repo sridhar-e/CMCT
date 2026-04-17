@@ -90,6 +90,30 @@
       "description": "A medical camp serving elderly people in a village",
       "imageUrl": "https://picsum.photos/seed/story3/800/600",
       "imageHint": "medical camp"
+    },
+    {
+      "id": "strategy-1",
+      "description": "Effective partnerships and networking",
+      "imageUrl": "https://picsum.photos/seed/strat1/800/500",
+      "imageHint": "hands unity"
+    },
+    {
+      "id": "strategy-2",
+      "description": "Large local donor base",
+      "imageUrl": "https://picsum.photos/seed/strat2/800/500",
+      "imageHint": "sustainability growth"
+    },
+    {
+      "id": "strategy-3",
+      "description": "Building long-term sustainable models",
+      "imageUrl": "https://picsum.photos/seed/strat3/800/500",
+      "imageHint": "future landscape"
+    },
+    {
+      "id": "strategy-bg",
+      "description": "Community background watermark",
+      "imageUrl": "https://picsum.photos/seed/stratbg/1920/1080",
+      "imageHint": "community group"
     }
   ]
 }
