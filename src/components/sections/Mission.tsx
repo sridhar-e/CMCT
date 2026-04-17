@@ -10,32 +10,32 @@ import { Button } from '@/components/ui/button';
 const Mission = () => {
   const programs = [
     {
-      title: "Education Support",
-      desc: "Providing scholarships and school supplies to ensure every child gets the learning they deserve.",
-      icon: <GraduationCap className="w-6 h-6" />,
-      image: PlaceHolderImages.find(i => i.id === 'program-education')?.imageUrl,
-      hint: "education classroom"
-    },
-    {
-      title: "Healthcare Services",
-      desc: "Operating mobile clinics and providing medical aid to remote villages lacking basic facilities.",
-      icon: <Stethoscope className="w-6 h-6" />,
-      image: PlaceHolderImages.find(i => i.id === 'program-health')?.imageUrl,
-      hint: "medical healthcare"
-    },
-    {
-      title: "Nutrition Programs",
+      title: "Eradication of extreme poverty and hunger",
       desc: "Ensuring no child goes to bed hungry through our community kitchens and nutritional supplements.",
       icon: <Utensils className="w-6 h-6" />,
       image: PlaceHolderImages.find(i => i.id === 'program-food')?.imageUrl,
       hint: "food relief"
     },
     {
-      title: "Community Growth",
+      title: "Access to education for all",
+      desc: "Providing scholarships and school supplies to ensure every child gets the learning they deserve.",
+      icon: <GraduationCap className="w-6 h-6" />,
+      image: PlaceHolderImages.find(i => i.id === 'program-education')?.imageUrl,
+      hint: "education classroom"
+    },
+    {
+      title: "Empowerment of women",
       desc: "Empowering adults through vocational training and self-help group initiatives.",
       icon: <Users className="w-6 h-6" />,
       image: "https://picsum.photos/seed/voca/600/400",
       hint: "community training"
+    },
+    {
+      title: "Access to affordable healthcare",
+      desc: "Operating mobile clinics and providing medical aid to remote villages lacking basic facilities.",
+      icon: <Stethoscope className="w-6 h-6" />,
+      image: PlaceHolderImages.find(i => i.id === 'program-health')?.imageUrl,
+      hint: "medical healthcare"
     }
   ];
 
