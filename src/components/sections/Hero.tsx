@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -25,17 +24,17 @@ const Hero = () => {
           </div>
           
           <h1 className="font-headline font-extrabold text-5xl md:text-7xl leading-tight text-foreground">
-            Empowering <br /> 
-            <span className="text-accent underline decoration-primary/30 underline-offset-8">Communities</span> through Trust.
+            Change made <br /> 
+            <span className="text-accent underline decoration-primary/30 underline-offset-8">possible</span>
           </h1>
           
           <p className="text-muted-foreground text-lg md:text-xl max-w-lg leading-relaxed">
-            CMCT Compass is dedicated to providing education, medical aid, and relief to those in need. Join us in our journey of transforming lives.
+            When faced with something bigger than ourselves—like poverty—it’s natural to feel overwhelmed. And yet, as every single life impacted by the Christian Missions Charitable Trust shows, change is possible.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button size="lg" className="rounded-full px-8 text-lg font-bold shadow-xl hover:scale-105 transition-all">
-              Get Involved
+              Be the change
             </Button>
             <Button variant="outline" size="lg" className="rounded-full px-8 text-lg font-bold group border-2">
               Learn More <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
