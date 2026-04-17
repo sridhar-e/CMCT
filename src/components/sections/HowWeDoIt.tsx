@@ -34,13 +34,14 @@ const HowWeDoIt = () => {
   return (
     <section id="how-we-do-it" className="py-24 bg-[#faf9f4] relative overflow-hidden">
       {/* Background Watermark Image */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+      <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
         {watermark && (
           <Image 
             src={watermark} 
             alt="Background" 
             fill 
-            className="object-cover grayscale" 
+            className="object-cover" 
+            priority
           />
         )}
       </div>

@@ -111,9 +111,9 @@
     },
     {
       "id": "strategy-bg",
-      "description": "Community background watermark",
-      "imageUrl": "https://picsum.photos/seed/stratbg/1920/1080",
-      "imageHint": "community group"
+      "description": "Strategy background",
+      "imageUrl": "/Home/Strategy.png",
+      "imageHint": "strategy background"
     }
   ]
 }

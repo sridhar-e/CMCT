@@ -83,6 +83,12 @@
       "description": "A medical camp serving elderly people in a village",
       "imageUrl": "https://picsum.photos/seed/story3/800/600",
       "imageHint": "medical camp"
+    },
+    {
+      "id": "strategy-bg",
+      "description": "Strategy background",
+      "imageUrl": "/Home/Strategy.png",
+      "imageHint": "strategy background"
     }
   ]
 }
