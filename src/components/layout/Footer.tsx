@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -25,7 +26,7 @@ const Footer = () => {
             </div>
           </Link>
           <p className="text-muted-foreground leading-relaxed">
-            Transforming lives through compassion and practical service since 1974. A globally recognized charitable trust.
+            Transforming lives through compassion and practical service since 1964. A globally recognized charitable trust.
           </p>
           <div className="flex gap-4">
             {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (

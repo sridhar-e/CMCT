@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="space-y-8 animate-fade-in">
           <div className="inline-flex items-center gap-2 bg-primary/20 text-accent-foreground px-4 py-2 rounded-full font-semibold text-sm">
             <Sparkles className="w-4 h-4 fill-primary" />
-            <span>Spreading Love & Compassion Since 1974</span>
+            <span>Spreading Love & Compassion Since 1964</span>
           </div>
           
           <h1 className="font-headline font-extrabold text-5xl md:text-7xl leading-tight text-foreground">

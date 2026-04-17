@@ -34,7 +34,7 @@ const About = () => {
           <h2 className="text-accent font-bold tracking-widest uppercase text-sm">About CMCT</h2>
           <h3 className="text-4xl md:text-5xl font-headline font-bold text-foreground">A Legacy of Care and Commitment</h3>
           <p className="text-muted-foreground text-lg">
-            Founded in 1974, Christian Missions Charitable Trust (CMCT) has been a beacon of hope for thousands. We believe that small acts of kindness can lead to monumental shifts in community well-being.
+            Founded in 1964, Christian Missions Charitable Trust (CMCT) has been a beacon of hope for thousands. We believe that small acts of kindness can lead to monumental shifts in community well-being.
           </p>
         </div>
 
