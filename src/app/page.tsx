@@ -6,6 +6,7 @@ import Hero from '@/components/sections/Hero';
 import Mission from '@/components/sections/Mission';
 import HowWeDoIt from '@/components/sections/HowWeDoIt';
 import Impact from '@/components/sections/Impact';
+import Stories from '@/components/sections/Stories';
 import Gallery from '@/components/sections/Gallery';
 import Testimonials from '@/components/sections/Testimonials';
 import CTA from '@/components/sections/CTA';
@@ -19,6 +20,7 @@ export default function Home() {
         <Mission />
         <HowWeDoIt />
         <Impact />
+        <Stories />
         <Gallery />
         <Testimonials />
         <CTA />

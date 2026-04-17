@@ -72,6 +72,24 @@
       "description": "Child playing",
       "imageUrl": "https://picsum.photos/seed/gal6/800/600",
       "imageHint": "happy child"
+    },
+    {
+      "id": "story-1",
+      "description": "A child studying happily in a well-lit room",
+      "imageUrl": "https://picsum.photos/seed/story1/800/600",
+      "imageHint": "child education"
+    },
+    {
+      "id": "story-2",
+      "description": "Women working together in a textile workshop",
+      "imageUrl": "https://picsum.photos/seed/story2/800/600",
+      "imageHint": "women empowerment"
+    },
+    {
+      "id": "story-3",
+      "description": "A medical camp serving elderly people in a village",
+      "imageUrl": "https://picsum.photos/seed/story3/800/600",
+      "imageHint": "medical camp"
     }
   ]
 }
