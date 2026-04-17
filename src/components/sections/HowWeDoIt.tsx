@@ -32,9 +32,9 @@ const HowWeDoIt = () => {
   const watermark = "/Home/Strategy.png";
 
   return (
-    <section id="how-we-do-it" className="py-24 bg-[#faf9f4] relative overflow-hidden">
-      {/* Background Image without overlay */}
-      <div className="absolute inset-0 opacity-[0.05] pointer-events-none">
+    <section id="how-we-do-it" className="py-24 relative overflow-hidden">
+      {/* Background Image only */}
+      <div className="absolute inset-0 pointer-events-none">
         <Image 
           src={watermark} 
           alt="Background" 
@@ -43,11 +43,6 @@ const HowWeDoIt = () => {
           priority
         />
       </div>
-
-      {/* Subtle Dot Pattern */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none" 
-           style={{ backgroundImage: 'radial-gradient(circle, #000 1px, transparent 1px)', backgroundSize: '24px 24px' }} 
-      />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
