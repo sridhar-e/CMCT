@@ -37,7 +37,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="relative w-10 h-10 group-hover:scale-110 transition-transform overflow-hidden rounded-lg">
+          <div className="relative w-14 h-14 group-hover:scale-110 transition-transform overflow-hidden rounded-lg">
             <Image 
               src={logo?.imageUrl || '/cmct-logo.png'} 
               alt={logo?.description || 'CMCT Logo'} 
