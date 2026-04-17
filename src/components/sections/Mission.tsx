@@ -13,28 +13,28 @@ const Mission = () => {
       title: "Eradication of extreme poverty and hunger",
       desc: "Ensuring no child goes to bed hungry through our community kitchens and nutritional supplements.",
       icon: <Utensils className="w-6 h-6" />,
-      image: PlaceHolderImages.find(i => i.id === 'program-food')?.imageUrl,
-      hint: "food relief"
+      image: "/poverty.jpeg",
+      hint: "poverty relief"
     },
     {
       title: "Access to education for all",
       desc: "Providing scholarships and school supplies to ensure every child gets the learning they deserve.",
       icon: <GraduationCap className="w-6 h-6" />,
-      image: PlaceHolderImages.find(i => i.id === 'program-education')?.imageUrl,
+      image: "/education.jpg",
       hint: "education classroom"
     },
     {
       title: "Empowerment of women",
       desc: "Empowering adults through vocational training and self-help group initiatives.",
       icon: <Users className="w-6 h-6" />,
-      image: "https://picsum.photos/seed/voca/600/400",
-      hint: "community training"
+      image: "/empowerment.jpg",
+      hint: "women empowerment"
     },
     {
       title: "Access to affordable healthcare",
       desc: "Operating mobile clinics and providing medical aid to remote villages lacking basic facilities.",
       icon: <Stethoscope className="w-6 h-6" />,
-      image: PlaceHolderImages.find(i => i.id === 'program-health')?.imageUrl,
+      image: "/healthcare.jpg",
       hint: "medical healthcare"
     }
   ];
@@ -62,19 +62,13 @@ const Mission = () => {
           {programs.map((program, idx) => (
             <div key={idx} className="group relative bg-white rounded-[2rem] overflow-hidden shadow-sm border hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
               <div className="aspect-video relative overflow-hidden">
-                {program.image ? (
-                  <Image 
-                    src={program.image} 
-                    alt={program.title} 
-                    fill 
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                    data-ai-hint={program.hint}
-                  />
-                ) : (
-                  <div className="w-full h-full bg-muted flex items-center justify-center">
-                    <span className="text-muted-foreground text-xs">Image unavailable</span>
-                  </div>
-                )}
+                <Image 
+                  src={program.image} 
+                  alt={program.title} 
+                  fill 
+                  className="object-cover group-hover:scale-110 transition-transform duration-700"
+                  data-ai-hint={program.hint}
+                />
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg">
                   {program.icon}
                 </div>
