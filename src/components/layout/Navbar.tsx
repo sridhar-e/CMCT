@@ -33,19 +33,19 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About Us', href: '#about' },
+    { name: 'About Us', href: '/about' },
     { 
       name: 'Our Work', 
-      href: '#mission',
+      href: '/#mission',
       children: [
-        { name: 'Education', href: '#education' },
-        { name: 'Healthcare', href: '#healthcare' },
-        { name: 'Community Development', href: '#community' },
+        { name: 'Education', href: '/#education' },
+        { name: 'Healthcare', href: '/#healthcare' },
+        { name: 'Community Development', href: '/#community' },
       ]
     },
-    { name: 'Stories of Hope', href: '#stories' },
-    { name: 'Our Campaigns', href: '#impact' },
-    { name: 'Contact Us', href: '#footer' },
+    { name: 'Stories of Hope', href: '/#stories' },
+    { name: 'Our Campaigns', href: '/#impact' },
+    { name: 'Contact Us', href: '/#footer' },
   ];
 
   return (
