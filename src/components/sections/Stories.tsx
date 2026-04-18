@@ -26,7 +26,7 @@ const Stories = () => {
       date: "Jan 28, 2024",
       title: "A Childhood to Remember: Sheeba’s story",
       desc: "As Sheeba effortlessly handles her mathematics class at Bethany Secondary School, clarifying concepts and ironing out difficulties for her students.",
-      image: "/Home/Stories/Sheeba.jpg",
+      image: "/Home/Stories/Sheeba-min.jpg",
       hint: "teacher education"
     },
     {
@@ -35,7 +35,7 @@ const Stories = () => {
       date: "Mar 02, 2024",
       title: "A grand pattern: Padmavathy’s story",
       desc: "It’s a busy morning at Padmavathy’s house. Her husband quickly finishes his breakfast before rushing to start a day filled with purpose and hope.",
-      image: "/Home/Stories/Padmavathy.jpg",
+      image: "/Home/Stories/Padmavathy-min.jpg",
       hint: "family livelihood"
     }
   ];
