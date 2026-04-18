@@ -5,7 +5,6 @@ import React from 'react';
 import Image from 'next/image';
 import { Handshake, Users, RefreshCcw, Heart, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const HowWeDoIt = () => {
   const steps = [
@@ -13,19 +12,16 @@ const HowWeDoIt = () => {
       title: "Effective partnerships and networking",
       desc: "We work alongside a committed network of volunteers, like-minded NGOs and corporate houses to amplify our impact.",
       icon: <Handshake className="w-8 h-8 text-accent" />,
-      image: PlaceHolderImages.find(img => img.id === 'strategy-1')?.imageUrl || "https://picsum.photos/seed/strat1/800/500",
     },
     {
       title: "Large local donor base",
       desc: "We constantly seek to engage and expand our donor base by innovating through technology and collaborating with multiple stakeholders.",
       icon: <Users className="w-8 h-8 text-accent" />,
-      image: PlaceHolderImages.find(img => img.id === 'strategy-2')?.imageUrl || "https://picsum.photos/seed/strat2/800/500",
     },
     {
       title: "Building long-term sustainable models",
       desc: "We believe that true development lies in the hands of empowered beneficiaries. Projects include revenue-generation components.",
       icon: <RefreshCcw className="w-8 h-8 text-accent" />,
-      image: PlaceHolderImages.find(img => img.id === 'strategy-3')?.imageUrl || "https://picsum.photos/seed/strat3/800/500",
     }
   ];
 
@@ -72,8 +68,8 @@ const HowWeDoIt = () => {
             <div key={idx} className="relative group">
               <Card className="border-none shadow-xl rounded-[3rem] bg-white overflow-hidden transition-all duration-500 hover:-translate-y-2 ring-1 ring-black/5">
                 <div className="h-2 w-1/3 bg-accent mx-auto rounded-b-full opacity-80" />
-                <CardContent className="p-8 md:p-10 space-y-8">
-                  <div className="flex justify-between items-start">
+                <CardContent className="p-8 md:p-10 space-y-8 text-center md:text-left">
+                  <div className="flex justify-center md:justify-start">
                     <div className="w-16 h-16 bg-[#fff9e6] rounded-full flex items-center justify-center shadow-inner">
                       {step.icon}
                     </div>
@@ -86,15 +82,6 @@ const HowWeDoIt = () => {
                     <p className="text-muted-foreground leading-relaxed text-sm font-medium">
                       {step.desc}
                     </p>
-                  </div>
-
-                  <div className="relative aspect-[16/10] rounded-[2rem] overflow-hidden shadow-lg mt-6">
-                    <Image 
-                      src={step.image} 
-                      alt={step.title} 
-                      fill 
-                      className="object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
                   </div>
                 </CardContent>
               </Card>
