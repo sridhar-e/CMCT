@@ -23,7 +23,9 @@ const AboutHero = () => {
             data-ai-hint="charity community"
           />
         )}
+        {/* Dark overlay for readability */}
         <div className="absolute inset-0 bg-black/60" />
+        {/* Gradient overlay for depth and focus */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
       </div>
 
