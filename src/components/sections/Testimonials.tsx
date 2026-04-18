@@ -10,16 +10,16 @@ import { cn } from '@/lib/utils';
 const Testimonials = () => {
   const reviews = [
     {
-      name: "David Miller",
-      role: "Philanthropist",
-      quote: "CMCT Compass operates with such transparency and heart. It's rare to see a trust so deeply rooted in the communities they serve.",
-      image: "https://picsum.photos/seed/p1/100/100"
+      name: "Padmavathy",
+      role: "Senior staff member",
+      quote: "CMCT expanded my horizons. I have been able to increase my skills through training programs for which I was sent. I began my career as a teacher, but CMCT gave me the opportunity to be a designer, a leader, and a mentor to women from difficult backgrounds.",
+      image: "https://picsum.photos/seed/padmavathy/100/100"
     },
     {
-      name: "Maria Rodriguez",
-      role: "Volunteer",
-      quote: "Spending time with the children in the education program showed me what true passion for change looks like. Simply inspiring.",
-      image: "https://picsum.photos/seed/p2/100/100"
+      name: "Sheeba",
+      role: "Ex-sponsored child and hostel inmate, now a Mathematics teacher",
+      quote: "CMCT has given us so many opportunities. It has always been ‘home,’ not just a hostel. I think every sponsor with CMCT should know that thanks to their support, children are getting a chance to realize their fullest potential.",
+      image: "https://picsum.photos/seed/sheeba/100/100"
     }
   ];
 
@@ -47,14 +47,14 @@ const Testimonials = () => {
               key={idx} 
               className="border-none shadow-2xl rounded-[2.5rem] bg-white transition-all duration-500 hover:scale-[1.02]"
             >
-              <CardContent className="p-10 md:p-12 flex flex-col items-center text-center space-y-8">
+              <CardContent className="p-10 md:p-12 flex flex-col items-center text-center space-y-8 h-full">
                 {/* Quote Icon */}
                 <div className="bg-[#FFF9E6] p-4 rounded-full">
                   <Quote className="w-6 h-6 text-accent fill-accent" />
                 </div>
                 
                 {/* Quote Text */}
-                <p className="text-muted-foreground text-lg italic font-medium leading-relaxed">
+                <p className="text-muted-foreground text-[15px] italic font-medium leading-relaxed flex-grow">
                   "{item.quote}"
                 </p>
                 
@@ -69,7 +69,7 @@ const Testimonials = () => {
                   </Avatar>
                   <div className="space-y-1">
                     <h5 className="font-headline font-bold text-foreground text-xl">{item.name}</h5>
-                    <p className="text-accent font-bold text-sm tracking-wide">{item.role}</p>
+                    <p className="text-accent font-bold text-xs tracking-wide uppercase max-w-[200px]">{item.role}</p>
                   </div>
                 </div>
               </CardContent>
