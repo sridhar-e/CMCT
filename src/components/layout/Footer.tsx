@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -23,7 +22,7 @@ const Footer = () => {
         {/* Column 1: Brand & Socials */}
         <div className="space-y-6">
           <Link href="/" className="flex items-center gap-2">
-            <div className="relative w-16 h-16 overflow-hidden rounded-lg bg-white p-2">
+            <div className="relative w-24 h-24 overflow-hidden rounded-lg bg-white p-2">
               <Image 
                 src={logo?.imageUrl || '/cmct-logo.png'} 
                 alt={logo?.description || 'CMCT Logo'} 
