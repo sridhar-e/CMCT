@@ -1,7 +1,7 @@
 
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -10,17 +10,8 @@ import { cn } from '@/lib/utils';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const logo = PlaceHolderImages.find(img => img.id === 'app-logo');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -34,10 +25,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 md:px-12',
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg py-2 border-b border-black/5' 
-          : 'bg-transparent py-4'
+        'fixed top-0 left-0 right-0 z-50 px-6 md:px-12 bg-transparent py-4'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
