@@ -4,7 +4,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -76,11 +75,6 @@ const Stories = () => {
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                     data-ai-hint={story.hint}
                   />
-                  <div className="absolute top-6 left-6">
-                    <Badge className="bg-white/90 backdrop-blur-sm text-foreground hover:bg-white px-4 py-1.5 rounded-full font-bold shadow-md">
-                      {story.category}
-                    </Badge>
-                  </div>
                 </div>
 
                 <div className="px-2 space-y-4">
