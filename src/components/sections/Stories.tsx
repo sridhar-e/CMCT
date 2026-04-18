@@ -17,7 +17,7 @@ const Stories = () => {
       date: "Feb 15, 2024",
       title: "Not just surviving, but thriving: Muthu’s story",
       desc: "When Muthu got his job as a waiter at a restaurant in Kanchipuram, he was ecstatic. It was what he had always wanted to do.",
-      image: "https://picsum.photos/seed/muthu/800/600",
+      image: "/Home/Stories/Muthu.jpg",
       hint: "vocational success"
     },
     {
@@ -26,7 +26,7 @@ const Stories = () => {
       date: "Jan 28, 2024",
       title: "A Childhood to Remember: Sheeba’s story",
       desc: "As Sheeba effortlessly handles her mathematics class at Bethany Secondary School, clarifying concepts and ironing out difficulties for her students.",
-      image: PlaceHolderImages.find(img => img.id === 'story-1')?.imageUrl || "https://picsum.photos/seed/story1/800/600",
+      image: "/Home/Stories/Sheeba.jpg",
       hint: "teacher education"
     },
     {
@@ -35,7 +35,7 @@ const Stories = () => {
       date: "Mar 02, 2024",
       title: "A grand pattern: Padmavathy’s story",
       desc: "It’s a busy morning at Padmavathy’s house. Her husband quickly finishes his breakfast before rushing to start a day filled with purpose and hope.",
-      image: PlaceHolderImages.find(img => img.id === 'story-2')?.imageUrl || "https://picsum.photos/seed/story2/800/600",
+      image: "/Home/Stories/Padmavathy.jpg",
       hint: "family livelihood"
     }
   ];
