@@ -32,8 +32,8 @@ const Footer = () => {
               />
             </div>
           </Link>
-          <p className="text-muted-foreground leading-relaxed text-sm max-w-xs">
-            Transforming lives through compassion and practical service since 1964. A globally recognized charitable trust.
+          <p className="text-muted-foreground leading-relaxed text-[15px] max-w-xs">
+            Transforming lives through compassion and practical service since 1964. A globally recognized charitable trust, driven by purpose and committed to lasting impact.
           </p>
           <div className="flex gap-3">
             {socialLinks.map(({ icon: Icon, href }, i) => (
