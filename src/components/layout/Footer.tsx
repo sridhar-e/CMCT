@@ -22,7 +22,7 @@ const Footer = () => {
         {/* Column 1: Brand & Socials */}
         <div className="space-y-6">
           <Link href="/" className="flex items-center gap-2">
-            <div className="relative w-24 h-24 overflow-hidden rounded-lg bg-white p-2">
+            <div className="relative w-28 h-28 overflow-hidden rounded-lg bg-white p-2">
               <Image 
                 src={logo?.imageUrl || '/cmct-logo.png'} 
                 alt={logo?.description || 'CMCT Logo'} 
@@ -50,7 +50,54 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Column 2: Reach Us (Combined CMCT & Bethany) */}
+        {/* Column 2: Know us better */}
+        <div>
+          <div className="mb-8">
+            <h4 className="font-headline font-bold text-xl text-primary inline-block">Know us better</h4>
+            <div className="h-0.5 w-12 bg-primary mt-1"></div>
+          </div>
+          <ul className="space-y-4 text-sm text-muted-foreground">
+            {['Our history', 'See our financials', 'Contributions report', 'Bethany BMWG report', 'Meet our team'].map((item) => (
+              <li key={item}>
+                <Link href="#" className="hover:text-primary transition-colors inline-block">{item}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Column 3: Connect & Get involved */}
+        <div className="space-y-12">
+          <div>
+            <div className="mb-8">
+              <h4 className="font-headline font-bold text-xl text-primary inline-block">Connect</h4>
+              <div className="h-0.5 w-12 bg-primary mt-1"></div>
+            </div>
+            <ul className="space-y-4 text-sm text-muted-foreground">
+              {['Contact us', 'Request a speaker', 'Shop and support', 'Visit our camp center', 'Sitemap'].map((item) => (
+                <li key={item}>
+                  <Link href="#" className="hover:text-primary transition-colors inline-block">{item}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <div className="mb-8">
+              <h4 className="font-headline font-bold text-xl text-primary inline-block">Get involved</h4>
+              <div className="h-0.5 w-12 bg-primary mt-1"></div>
+            </div>
+            <ul className="space-y-4 text-sm text-muted-foreground">
+              <li>
+                <Link href="#" className="hover:text-primary transition-colors inline-block">Donate</Link>
+              </li>
+              <li>
+                <Link href="#" className="hover:text-primary transition-colors inline-block">Sponsor a child</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Column 4: Reach Us (Combined CMCT & Bethany) */}
         <div className="space-y-8">
           <div>
             <div className="mb-8">
@@ -96,53 +143,6 @@ const Footer = () => {
                 <span className="hover:text-primary transition-colors cursor-pointer">cmctbethany@gmail.com</span>
               </div>
             </div>
-          </div>
-        </div>
-
-        {/* Column 3: Know us better */}
-        <div>
-          <div className="mb-8">
-            <h4 className="font-headline font-bold text-xl text-primary inline-block">Know us better</h4>
-            <div className="h-0.5 w-12 bg-primary mt-1"></div>
-          </div>
-          <ul className="space-y-4 text-sm text-muted-foreground">
-            {['Our history', 'See our financials', 'Contributions report', 'Bethany BMWG report', 'Meet our team'].map((item) => (
-              <li key={item}>
-                <Link href="#" className="hover:text-primary transition-colors inline-block">{item}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Column 4: Connect & Get involved */}
-        <div className="space-y-12">
-          <div>
-            <div className="mb-8">
-              <h4 className="font-headline font-bold text-xl text-primary inline-block">Connect</h4>
-              <div className="h-0.5 w-12 bg-primary mt-1"></div>
-            </div>
-            <ul className="space-y-4 text-sm text-muted-foreground">
-              {['Contact us', 'Request a speaker', 'Shop and support', 'Visit our camp center', 'Sitemap'].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="hover:text-primary transition-colors inline-block">{item}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <div className="mb-8">
-              <h4 className="font-headline font-bold text-xl text-primary inline-block">Get involved</h4>
-              <div className="h-0.5 w-12 bg-primary mt-1"></div>
-            </div>
-            <ul className="space-y-4 text-sm text-muted-foreground">
-              <li>
-                <Link href="#" className="hover:text-primary transition-colors inline-block">Donate</Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-primary transition-colors inline-block">Sponsor a child</Link>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
