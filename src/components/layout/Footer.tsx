@@ -10,6 +10,13 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 const Footer = () => {
   const logo = PlaceHolderImages.find(img => img.id === 'app-logo');
 
+  const socialLinks = [
+    { icon: Facebook, href: "https://www.facebook.com/cmctindia.org" },
+    { icon: Twitter, href: "https://x.com/cmctindia_org" },
+    { icon: Instagram, href: "https://www.instagram.com/cmctindia/" },
+    { icon: Youtube, href: "https://www.youtube.com/channel/UCSkgoQX123-7X-_UMyxeHaw" },
+  ];
+
   return (
     <footer className="bg-foreground text-background pt-20 pb-10 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
@@ -29,8 +36,14 @@ const Footer = () => {
             Transforming lives through compassion and practical service since 1964. A globally recognized charitable trust.
           </p>
           <div className="flex gap-4">
-            {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
-              <a key={i} href="#" className="w-10 h-10 bg-white/5 hover:bg-primary hover:text-foreground transition-all rounded-full flex items-center justify-center">
+            {socialLinks.map(({ icon: Icon, href }, i) => (
+              <a 
+                key={i} 
+                href={href} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-white/5 hover:bg-primary hover:text-foreground transition-all rounded-full flex items-center justify-center"
+              >
                 <Icon className="w-5 h-5" />
               </a>
             ))}
