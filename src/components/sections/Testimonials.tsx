@@ -32,7 +32,7 @@ const Testimonials = () => {
     <section id="testimonials" className="py-24 bg-secondary/20">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-accent font-bold tracking-widest uppercase text-sm">Words of Gratitude</h2>
+          <h2 className="text-accent font-bold tracking-widest uppercase text-sm">Testimonials</h2>
           <h3 className="text-4xl md:text-5xl font-headline font-bold text-foreground">Voices from Our Community</h3>
         </div>
 
