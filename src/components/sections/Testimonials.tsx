@@ -25,30 +25,27 @@ const Testimonials = () => {
 
   return (
     <section id="testimonials" className="py-24 bg-secondary/10 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-[1fr_2fr] gap-16 items-center">
         {/* Left Side: Text Content */}
         <div className="space-y-6 animate-fade-in">
           <div className="space-y-2">
             <h2 className="text-accent font-bold tracking-widest uppercase text-sm">Testimonials</h2>
-            <h3 className="text-4xl md:text-6xl font-headline font-bold text-foreground leading-tight">
+            <h3 className="text-4xl md:text-5xl font-headline font-bold text-foreground leading-tight">
               Voices from <br />
               Our <span className="text-accent italic">Community</span>
             </h3>
           </div>
-          <p className="text-muted-foreground text-lg max-w-md font-medium leading-relaxed">
+          <p className="text-muted-foreground text-lg max-w-sm font-medium leading-relaxed">
             The stories of impact are best told by those who have witnessed the transformation firsthand. Your support makes these stories possible.
           </p>
         </div>
 
-        {/* Right Side: Stacked Cards */}
-        <div className="relative space-y-12 lg:space-y-0 lg:h-[650px] flex flex-col justify-center">
+        {/* Right Side: Horizontal Cards */}
+        <div className="grid md:grid-cols-2 gap-6 relative z-10">
           {reviews.map((item, idx) => (
             <Card 
               key={idx} 
-              className={cn(
-                "border-none shadow-2xl rounded-[2.5rem] bg-white transition-all duration-500 hover:scale-[1.02] relative z-10",
-                idx === 0 ? "lg:absolute lg:top-0 lg:left-0 lg:w-[85%]" : "lg:absolute lg:bottom-0 lg:right-0 lg:w-[85%]"
-              )}
+              className="border-none shadow-2xl rounded-[2.5rem] bg-white transition-all duration-500 hover:scale-[1.02]"
             >
               <CardContent className="p-10 md:p-12 flex flex-col items-center text-center space-y-8">
                 {/* Quote Icon */}
@@ -57,7 +54,7 @@ const Testimonials = () => {
                 </div>
                 
                 {/* Quote Text */}
-                <p className="text-muted-foreground text-lg italic font-medium leading-relaxed max-w-[280px]">
+                <p className="text-muted-foreground text-lg italic font-medium leading-relaxed">
                   "{item.quote}"
                 </p>
                 
@@ -78,9 +75,9 @@ const Testimonials = () => {
               </CardContent>
             </Card>
           ))}
-
+          
           {/* Decorative Background Blur */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accent/10 rounded-full blur-[120px] -z-10" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-accent/5 rounded-full blur-[100px] -z-10" />
         </div>
       </div>
     </section>
