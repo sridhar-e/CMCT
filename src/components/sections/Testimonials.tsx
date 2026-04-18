@@ -12,13 +12,13 @@ const Testimonials = () => {
     {
       name: "David Miller",
       role: "Philanthropist",
-      quote: "CMCT operates with such transparency and heart. It's rare to see a trust so deeply rooted in the communities they serve. Their commitment to every individual is truly life-changing.",
+      quote: "CMCT Compass operates with such transparency and heart. It's rare to see a trust so deeply rooted in the communities they serve.",
       image: "https://picsum.photos/seed/p1/100/100"
     },
     {
       name: "Maria Rodriguez",
       role: "Volunteer",
-      quote: "Spending time with the children in the education program showed me what true passion for change looks like. Simply inspiring to see the hope in their eyes.",
+      quote: "Spending time with the children in the education program showed me what true passion for change looks like. Simply inspiring.",
       image: "https://picsum.photos/seed/p2/100/100"
     }
   ];
@@ -41,42 +41,46 @@ const Testimonials = () => {
         </div>
 
         {/* Right Side: Stacked Cards */}
-        <div className="relative space-y-12 lg:space-y-0 lg:h-[600px] flex flex-col justify-center">
+        <div className="relative space-y-12 lg:space-y-0 lg:h-[650px] flex flex-col justify-center">
           {reviews.map((item, idx) => (
             <Card 
               key={idx} 
               className={cn(
-                "border-none shadow-2xl rounded-[3rem] bg-white transition-all duration-500 hover:scale-[1.02] relative z-10",
-                idx === 0 ? "lg:absolute lg:top-0 lg:left-0 lg:w-[90%]" : "lg:absolute lg:bottom-0 lg:right-0 lg:w-[90%]"
+                "border-none shadow-2xl rounded-[2.5rem] bg-white transition-all duration-500 hover:scale-[1.02] relative z-10",
+                idx === 0 ? "lg:absolute lg:top-0 lg:left-0 lg:w-[85%]" : "lg:absolute lg:bottom-0 lg:right-0 lg:w-[85%]"
               )}
             >
-              <CardContent className="p-8 md:p-12 space-y-8">
-                <div className="flex justify-between items-start">
-                  <div className="bg-primary/10 p-4 rounded-2xl">
-                    <Quote className="w-8 h-8 text-accent fill-accent" />
-                  </div>
+              <CardContent className="p-10 md:p-12 flex flex-col items-center text-center space-y-8">
+                {/* Quote Icon */}
+                <div className="bg-[#FFF9E6] p-4 rounded-full">
+                  <Quote className="w-6 h-6 text-accent fill-accent" />
                 </div>
                 
-                <p className="text-muted-foreground text-lg md:text-xl italic font-medium leading-relaxed">
+                {/* Quote Text */}
+                <p className="text-muted-foreground text-lg italic font-medium leading-relaxed max-w-[280px]">
                   "{item.quote}"
                 </p>
                 
-                <div className="flex items-center gap-4 pt-4 border-t border-secondary">
-                  <Avatar className="w-14 h-14 border-2 border-primary/20 p-0.5">
+                {/* Divider Line */}
+                <div className="w-10 h-1 bg-accent rounded-full" />
+                
+                {/* User Info */}
+                <div className="flex flex-col items-center space-y-4 pt-2">
+                  <Avatar className="w-20 h-20 border-4 border-accent p-0.5">
                     <AvatarImage src={item.image} alt={item.name} className="rounded-full object-cover" />
                     <AvatarFallback className="bg-primary text-white font-bold">{item.name.charAt(0)}</AvatarFallback>
                   </Avatar>
-                  <div>
-                    <h5 className="font-bold text-foreground text-lg">{item.name}</h5>
-                    <p className="text-accent font-bold text-xs uppercase tracking-widest">{item.role}</p>
+                  <div className="space-y-1">
+                    <h5 className="font-headline font-bold text-foreground text-xl">{item.name}</h5>
+                    <p className="text-accent font-bold text-sm tracking-wide">{item.role}</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
           ))}
 
-          {/* Decorative elements behind cards */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accent/5 rounded-full blur-[100px] -z-10" />
+          {/* Decorative Background Blur */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-accent/10 rounded-full blur-[120px] -z-10" />
         </div>
       </div>
     </section>
@@ -84,5 +88,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-
-    
