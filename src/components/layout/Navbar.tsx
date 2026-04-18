@@ -1,7 +1,7 @@
 
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -22,7 +22,13 @@ import {
 } from "@/components/ui/accordion";
 
 const Navbar = () => {
+  const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const logo = PlaceHolderImages.find(img => img.id === 'app-logo');
 
   const navLinks = [
@@ -67,24 +73,31 @@ const Navbar = () => {
           <div className="flex items-center gap-8">
             {navLinks.map((link) => (
               link.children ? (
-                <DropdownMenu key={link.name}>
-                  <DropdownMenuTrigger className="flex items-center gap-1 font-bold text-foreground/80 hover:text-accent transition-colors text-[13px] uppercase tracking-[0.15em] outline-none">
+                mounted ? (
+                  <DropdownMenu key={link.name}>
+                    <DropdownMenuTrigger className="flex items-center gap-1 font-bold text-foreground/80 hover:text-accent transition-colors text-[13px] uppercase tracking-[0.15em] outline-none">
+                      {link.name}
+                      <ChevronDown className="w-4 h-4" />
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="start" className="w-56 bg-white rounded-xl shadow-2xl border-none p-2">
+                      {link.children.map((child) => (
+                        <DropdownMenuItem key={child.name} asChild className="rounded-lg">
+                          <Link
+                            href={child.href}
+                            className="w-full font-semibold text-foreground/70 hover:text-accent cursor-pointer py-3"
+                          >
+                            {child.name}
+                          </Link>
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                ) : (
+                  <div key={link.name} className="flex items-center gap-1 font-bold text-foreground/80 text-[13px] uppercase tracking-[0.15em] opacity-50">
                     {link.name}
                     <ChevronDown className="w-4 h-4" />
-                  </DropdownMenuTrigger>
-                  <DropdownMenuContent align="start" className="w-56 bg-white rounded-xl shadow-2xl border-none p-2">
-                    {link.children.map((child) => (
-                      <DropdownMenuItem key={child.name} asChild className="rounded-lg">
-                        <Link
-                          href={child.href}
-                          className="w-full font-semibold text-foreground/70 hover:text-accent cursor-pointer py-3"
-                        >
-                          {child.name}
-                        </Link>
-                      </DropdownMenuItem>
-                    ))}
-                  </DropdownMenuContent>
-                </DropdownMenu>
+                  </div>
+                )
               ) : (
                 <Link
                   key={link.name}
@@ -111,7 +124,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
+      {mounted && mobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b animate-fade-in p-10 shadow-2xl flex flex-col gap-4">
           <Accordion type="single" collapsible className="w-full">
             {navLinks.map((link) => (
