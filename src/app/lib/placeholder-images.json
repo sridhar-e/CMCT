@@ -9,8 +9,8 @@
     },
     {
       "id": "hero-charity",
-      "description": "CMCT Change Possible Banner",
-      "imageUrl": "/Possible-banner.png",
+      "description": "CMCT Home Banner",
+      "imageUrl": "/Home/Home_banner.jpg",
       "imageHint": "charity banner"
     },
     {
