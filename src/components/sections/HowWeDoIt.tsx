@@ -15,7 +15,7 @@ const HowWeDoIt = () => {
     },
     {
       title: "Large local donor base",
-      desc: "We constantly seek to engage and expand our donor base by innovating through technology and collaborating with multiple stakeholders.",
+      desc: "We constantly seek to engage and expand our donor base by innovating through technology, collaborating with multiple stakeholders and investing in need-of-the-hour community projects.",
       icon: <Users className="w-8 h-8 text-accent" />,
     },
     {
