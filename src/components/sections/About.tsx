@@ -2,27 +2,27 @@
 "use client";
 
 import React from 'react';
-import { Target, Eye, ShieldCheck } from 'lucide-react';
+import { Heart, Star, ClipboardCheck } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const About = () => {
   const goals = [
     {
-      title: "Our Mission",
-      desc: "To manifest God's love through practical service to the poor, irrespective of religion, caste or creed.",
-      icon: <Target className="w-8 h-8 text-accent" />,
+      title: "We are Christ-centred",
+      desc: "As an organization, we encourage staff to emulate Christ in selfless service. We reach out to all people with love and compassion, irrespective of their caste, creed, or religious preferences, with no strings attached.",
+      icon: <Heart className="w-8 h-8 text-accent" />,
       color: "bg-primary/10"
     },
     {
-      title: "Our Vision",
-      desc: "A world where every individual has the opportunity to live a life of dignity, health, and purpose.",
-      icon: <Eye className="w-8 h-8 text-accent" />,
+      title: "We pursue excellence",
+      desc: "We uphold high standards of integrity and excellence in our professional lives. We encourage staff to keep abreast with industry-recognized best practices, so we can serve beneficiaries in the best possible way.",
+      icon: <Star className="w-8 h-8 text-accent" />,
       color: "bg-primary/10"
     },
     {
-      title: "Our Values",
-      desc: "Compassion, integrity, accountability, and excellence in everything we do to serve humanity.",
-      icon: <ShieldCheck className="w-8 h-8 text-accent" />,
+      title: "We are accountable",
+      desc: "We seek to minimize our administrative overheads and ensure that every project gets adequate financial support. Our financial transactions are regularly audited and available for review.",
+      icon: <ClipboardCheck className="w-8 h-8 text-accent" />,
       color: "bg-primary/10"
     }
   ];
@@ -45,7 +45,7 @@ const About = () => {
                 <div className={`${goal.color} w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
                   {goal.icon}
                 </div>
-                <h4 className="text-2xl font-headline font-bold">{goal.title}</h4>
+                <h4 className="text-2xl font-headline font-bold leading-tight">{goal.title}</h4>
                 <p className="text-muted-foreground leading-relaxed">
                   {goal.desc}
                 </p>
