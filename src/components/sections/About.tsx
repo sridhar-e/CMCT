@@ -40,7 +40,7 @@ const About = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {goals.map((goal, idx) => (
-            <Card key={idx} className="border-none shadow-sm hover:shadow-xl transition-all duration-300 group rounded-[2rem] overflow-hidden">
+            <Card key={idx} className="border-none shadow-md bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group rounded-[2rem] overflow-hidden">
               <CardContent className="p-8 space-y-6">
                 <div className={`${goal.color} w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
                   {goal.icon}
