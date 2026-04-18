@@ -32,7 +32,7 @@ const Footer = () => {
               />
             </div>
           </Link>
-          <p className="text-muted-foreground leading-relaxed text-[15px] max-w-xs">
+          <p className="text-muted-foreground leading-relaxed text-[16px] max-w-xs">
             Transforming lives through compassion and practical service since 1964. A globally recognized charitable trust, driven by purpose and committed to lasting impact.
           </p>
           <div className="flex gap-3">
