@@ -63,19 +63,19 @@ const HowWeDoIt = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 items-start relative">
+        <div className="grid md:grid-cols-3 gap-8 relative">
           {steps.map((step, idx) => (
-            <div key={idx} className="relative group">
-              <Card className="border-none shadow-xl rounded-[3rem] bg-white overflow-hidden transition-all duration-500 hover:-translate-y-2 ring-1 ring-black/5">
+            <div key={idx} className="relative group h-full">
+              <Card className="border-none shadow-xl rounded-[3rem] bg-white overflow-hidden transition-all duration-500 hover:-translate-y-2 ring-1 ring-black/5 h-full flex flex-col">
                 <div className="h-2 w-1/3 bg-accent mx-auto rounded-b-full opacity-80" />
-                <CardContent className="p-8 md:p-10 space-y-8 text-center md:text-left">
+                <CardContent className="p-8 md:p-10 space-y-8 text-center md:text-left flex-grow flex flex-col">
                   <div className="flex justify-center md:justify-start">
                     <div className="w-16 h-16 bg-[#fff9e6] rounded-full flex items-center justify-center shadow-inner">
                       {step.icon}
                     </div>
                   </div>
                   
-                  <div className="space-y-4">
+                  <div className="space-y-4 flex-grow">
                     <h4 className="text-2xl font-headline font-bold leading-tight min-h-[4rem]">
                       {step.title}
                     </h4>
