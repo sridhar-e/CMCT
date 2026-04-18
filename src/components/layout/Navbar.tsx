@@ -41,7 +41,7 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center group relative z-10">
+        <Link href="/" className="flex items-center group relative z-10 mt-[-26px]">
           <div className="relative w-[160px] h-[160px] group-hover:scale-105 transition-transform duration-500 overflow-hidden">
             <Image 
               src={logo?.imageUrl || '/cmct-logo.png'} 
@@ -55,7 +55,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-10 mt-[-100px]">
           <div className="flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
