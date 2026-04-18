@@ -21,7 +21,7 @@ const CTA = () => {
               <HandHeart className="w-4 h-4" />
               <span>Join the Movement</span>
             </div>
-            <h2 className="text-4xl md:text-6xl font-headline font-bold leading-tight">
+            <h2 className="text-4xl md:text-[54px] font-headline font-bold leading-tight">
               Ready to make a <br /> 
               <span className="text-primary italic">Difference?</span>
             </h2>
