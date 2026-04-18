@@ -20,7 +20,7 @@ const HowWeDoIt = () => {
     },
     {
       title: "Building long-term sustainable models",
-      desc: "We believe that true development lies in the hands of empowered beneficiaries. Projects include revenue-generation components.",
+      desc: "We believe that true development lies in the hands of empowered beneficiaries. Most projects include a revenue-generation component that helps beneficiaries support themselves.",
       icon: <RefreshCcw className="w-8 h-8 text-accent" />,
     }
   ];
