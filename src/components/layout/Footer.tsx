@@ -18,7 +18,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-foreground text-background pt-20 pb-10 px-6 md:px-12">
+    <footer className="bg-[#1a1a1a] text-background pt-20 pb-10 px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
         {/* Column 1: Brand & Socials */}
         <div className="space-y-6">
@@ -51,70 +51,78 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Column 2: Reach Us (Primary Office) */}
+        {/* Column 2: Reach Us (Combined CMCT & Bethany) */}
+        <div className="space-y-8">
+          <div>
+            <div className="mb-8">
+              <h4 className="font-headline font-bold text-xl text-primary inline-block">Reach Us</h4>
+              <div className="h-0.5 w-12 bg-primary mt-1"></div>
+            </div>
+            
+            <div className="space-y-5 text-sm">
+              <p className="font-bold text-lg text-white leading-tight uppercase tracking-tight">
+                CHRISTIAN MISSIONS<br />CHARITABLE TRUST
+              </p>
+              
+              <div className="flex gap-3 items-start text-muted-foreground">
+                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <span className="leading-relaxed">
+                  New No : 72 Old No : 59, Spur Tank Road,<br />
+                  Chetpet, Chennai - 600031,<br />
+                  Tamil Nadu, India.
+                </span>
+              </div>
+              
+              <div className="flex gap-3 items-center text-muted-foreground">
+                <Phone className="w-5 h-5 text-primary shrink-0" />
+                <span>044-69182300 / 044-69182340</span>
+              </div>
+              
+              <div className="flex gap-3 items-center text-muted-foreground">
+                <Mail className="w-5 h-5 text-primary shrink-0" />
+                <span className="hover:text-primary transition-colors cursor-pointer">info@cmctindia.in</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-8 border-t border-white/10">
+            <p className="font-bold text-lg text-white mb-5 uppercase tracking-tight">Bethany Health Care Centre</p>
+            <div className="space-y-4 text-sm">
+              <div className="flex gap-3 items-center text-muted-foreground">
+                <Phone className="w-5 h-5 text-primary shrink-0" />
+                <span>044 69182355 / 9841277796</span>
+              </div>
+              <div className="flex gap-3 items-center text-muted-foreground">
+                <Mail className="w-5 h-5 text-primary shrink-0" />
+                <span className="hover:text-primary transition-colors cursor-pointer">cmctbethany@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Column 3: Know us better */}
         <div>
-          <h4 className="font-headline font-bold text-lg mb-8 text-primary uppercase tracking-wider">Reach Us</h4>
-          <div className="space-y-4 text-sm text-muted-foreground">
-            <p className="font-bold text-background leading-tight">CHRISTIAN MISSIONS CHARITABLE TRUST</p>
-            <div className="flex gap-3 items-start">
-              <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
-              <span>
-                New No : 72 Old No : 59<br />
-                Spur Tank Road, Chetpet,<br />
-                Chennai - 600031,<br />
-                Tamil Nadu, India.
-              </span>
-            </div>
-            <div className="flex gap-3 items-center">
-              <Phone className="w-5 h-5 text-accent shrink-0" />
-              <div className="flex flex-col">
-                <span>044-69182300</span>
-                <span>044-69182340</span>
-              </div>
-            </div>
-            <div className="flex gap-3 items-center">
-              <Mail className="w-5 h-5 text-accent shrink-0" />
-              <span className="hover:text-primary transition-colors">info@cmctindia.in</span>
-            </div>
+          <div className="mb-8">
+            <h4 className="font-headline font-bold text-xl text-primary inline-block">Know us better</h4>
+            <div className="h-0.5 w-12 bg-primary mt-1"></div>
           </div>
+          <ul className="space-y-4 text-sm text-muted-foreground">
+            {['Our history', 'See our financials', 'Contributions report', 'Bethany BMWG report', 'Meet our team'].map((item) => (
+              <li key={item}>
+                <Link href="#" className="hover:text-primary transition-colors inline-block">{item}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Column 3: Bethany & Know Us Better */}
-        <div className="space-y-10">
+        {/* Column 4: Connect & Get involved */}
+        <div className="space-y-12">
           <div>
-            <h4 className="font-headline font-bold text-lg mb-6 text-primary uppercase tracking-wider">Bethany Health Care</h4>
-            <div className="space-y-3 text-sm text-muted-foreground">
-              <div className="flex gap-3 items-center">
-                <Phone className="w-5 h-5 text-accent shrink-0" />
-                <div className="flex flex-col">
-                  <span>044 69182355</span>
-                  <span>9841277796</span>
-                </div>
-              </div>
-              <div className="flex gap-3 items-center">
-                <Mail className="w-5 h-5 text-accent shrink-0" />
-                <span className="hover:text-primary transition-colors">cmctbethany@gmail.com</span>
-              </div>
+            <div className="mb-8">
+              <h4 className="font-headline font-bold text-xl text-primary inline-block">Connect</h4>
+              <div className="h-0.5 w-12 bg-primary mt-1"></div>
             </div>
-          </div>
-
-          <div>
-            <h4 className="font-headline font-bold text-sm mb-4 text-background uppercase">Know us better</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              {['Our history', 'See our financials', 'Contributions report', 'Bethany BMWG report', 'Meet our team'].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="hover:text-primary transition-colors inline-block">{item}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Column 4: Connect & Get Involved */}
-        <div className="space-y-10">
-          <div>
-            <h4 className="font-headline font-bold text-lg mb-6 text-primary uppercase tracking-wider">Connect</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <ul className="space-y-4 text-sm text-muted-foreground">
               {['Contact us', 'Request a speaker', 'Shop and support', 'Visit our camp center', 'Sitemap'].map((item) => (
                 <li key={item}>
                   <Link href="#" className="hover:text-primary transition-colors inline-block">{item}</Link>
@@ -124,13 +132,16 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-headline font-bold text-sm mb-4 text-background uppercase">Get involved</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <div className="mb-8">
+              <h4 className="font-headline font-bold text-xl text-primary inline-block">Get involved</h4>
+              <div className="h-0.5 w-12 bg-primary mt-1"></div>
+            </div>
+            <ul className="space-y-4 text-sm text-muted-foreground">
               <li>
-                <Link href="#" className="text-primary font-bold hover:underline transition-all">Donate Now</Link>
+                <Link href="#" className="hover:text-primary transition-colors inline-block">Donate</Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-primary transition-colors">Sponsor a child</Link>
+                <Link href="#" className="hover:text-primary transition-colors inline-block">Sponsor a child</Link>
               </li>
             </ul>
           </div>
@@ -140,16 +151,18 @@ const Footer = () => {
       {/* Footer Bottom: Policies & Copyright */}
       <div className="max-w-7xl mx-auto pt-10 border-t border-white/10 flex flex-col gap-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-muted-foreground">
-          <div className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2">
-            {['Terms and Conditions', 'Privacy Policy', 'Refund Policy', 'Donation FAQ', 'Cookies Policy'].map((policy) => (
-              <Link key={policy} href="#" className="hover:text-white transition-colors">
-                {policy}
-              </Link>
-            ))}
+          <div className="text-center md:text-left space-y-1">
+            <p className="font-medium">Copyright © 2026 - CMCT - All rights reserved. <span className="opacity-50 ml-2">Powered by WEZIGNS</span></p>
           </div>
-          <div className="text-center md:text-right space-y-1">
-            <p>Copyright © 2026 - CMCT- All rights reserved.</p>
-            <p className="text-[10px] opacity-50">Powered by WEZIGNS</p>
+          <div className="flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-2">
+            {['Terms and Conditions', 'Privacy Policy', 'Refund Policy', 'Donation FAQ', 'Cookies Policy'].map((policy, i) => (
+              <React.Fragment key={policy}>
+                <Link href="#" className="hover:text-white transition-colors">
+                  {policy}
+                </Link>
+                {i < 4 && <span className="opacity-30">|</span>}
+              </React.Fragment>
+            ))}
           </div>
         </div>
       </div>
