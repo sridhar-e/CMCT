@@ -70,7 +70,7 @@ const Counter = ({ value }: { value: string }) => {
 
 const Impact = () => {
   const stats = [
-    { label: "Meals served daily", value: "2,000+", icon: <Utensils className="w-10 h-10" /> },
+    { label: "Meals served everyday", value: "2,000+", icon: <Utensils className="w-10 h-10" /> },
     { label: "Women empowered", value: "680+", icon: <UserCheck className="w-10 h-10" /> },
     { label: "Children educated", value: "2,700+", icon: <GraduationCap className="w-10 h-10" /> },
     { label: "Patients served", value: "300+", icon: <Stethoscope className="w-10 h-10" /> },
