@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -22,10 +23,12 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Programs', href: '#programs' },
-    { name: 'Gallery', href: '#gallery' },
-    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '#about' },
+    { name: 'Our Work', href: '#mission' },
+    { name: 'Stories of Hope', href: '#stories' },
+    { name: 'Our Campaigns', href: '#impact' },
+    { name: 'Contact Us', href: '#footer' },
   ];
 
   return (
@@ -55,13 +58,13 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.href}
-              className="font-medium text-foreground/80 hover:text-accent transition-colors"
+              className="font-medium text-foreground/80 hover:text-accent transition-colors text-sm uppercase tracking-wide"
             >
               {link.name}
             </Link>
           ))}
-          <Button className="rounded-full px-6 font-semibold shadow-md hover:scale-105 transition-all">
-            Donate Now
+          <Button className="rounded-full px-6 font-semibold shadow-md hover:scale-105 transition-all bg-accent text-foreground hover:bg-accent/90">
+            Donate
           </Button>
         </div>
 
@@ -88,8 +91,8 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <Button className="rounded-full w-full py-6 font-semibold shadow-lg">
-              Donate Now
+            <Button className="rounded-full w-full py-6 font-semibold shadow-lg bg-accent text-foreground">
+              Donate
             </Button>
           </div>
         </div>
