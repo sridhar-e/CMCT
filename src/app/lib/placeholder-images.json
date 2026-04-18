@@ -114,6 +114,18 @@
       "description": "Strategy background",
       "imageUrl": "/Home/Strategy.png",
       "imageHint": "strategy background"
+    },
+    {
+      "id": "testi-1",
+      "description": "Padmavathy - Testimonial",
+      "imageUrl": "/About/About-Testi1.png",
+      "imageHint": "testimonial woman"
+    },
+    {
+      "id": "testi-2",
+      "description": "Sheeba - Testimonial",
+      "imageUrl": "/About/About-Testi2.png",
+      "imageHint": "testimonial woman"
     }
   ]
 }

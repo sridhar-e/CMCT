@@ -5,21 +5,24 @@ import React from 'react';
 import { Quote } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { cn } from '@/lib/utils';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const Testimonials = () => {
+  const testi1 = PlaceHolderImages.find(img => img.id === 'testi-1');
+  const testi2 = PlaceHolderImages.find(img => img.id === 'testi-2');
+
   const reviews = [
     {
       name: "Padmavathy",
       role: "Senior staff member",
       quote: "CMCT expanded my horizons. I have been able to increase my skills through training programs for which I was sent. I began my career as a teacher, but CMCT gave me the opportunity to be a designer, a leader, and a mentor to women from difficult backgrounds.",
-      image: "https://picsum.photos/seed/padmavathy/100/100"
+      image: testi1?.imageUrl || "/About/About-Testi1.png"
     },
     {
       name: "Sheeba",
       role: "Ex-sponsored child and hostel inmate, now a Mathematics teacher",
       quote: "CMCT has given us so many opportunities. It has always been ‘home,’ not just a hostel. I think every sponsor with CMCT should know that thanks to their support, children are getting a chance to realize their fullest potential.",
-      image: "https://picsum.photos/seed/sheeba/100/100"
+      image: testi2?.imageUrl || "/About/About-Testi2.png"
     }
   ];
 
@@ -40,7 +43,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Right Side: Horizontal Cards */}
+        {/* Right Side: Side-by-Side Cards */}
         <div className="grid md:grid-cols-2 gap-6 relative z-10">
           {reviews.map((item, idx) => (
             <Card 
