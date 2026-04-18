@@ -5,9 +5,21 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,7 +28,15 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '#about' },
-    { name: 'Our Work', href: '#mission' },
+    { 
+      name: 'Our Work', 
+      href: '#mission',
+      children: [
+        { name: 'Education', href: '#education' },
+        { name: 'Healthcare', href: '#healthcare' },
+        { name: 'Community Development', href: '#community' },
+      ]
+    },
     { name: 'Stories of Hope', href: '#stories' },
     { name: 'Our Campaigns', href: '#impact' },
     { name: 'Contact Us', href: '#footer' },
@@ -46,13 +66,34 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-10 mt-[-75px]">
           <div className="flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="font-bold text-foreground/80 hover:text-accent transition-colors text-[13px] uppercase tracking-[0.15em]"
-              >
-                {link.name}
-              </Link>
+              link.children ? (
+                <DropdownMenu key={link.name}>
+                  <DropdownMenuTrigger className="flex items-center gap-1 font-bold text-foreground/80 hover:text-accent transition-colors text-[13px] uppercase tracking-[0.15em] outline-none">
+                    {link.name}
+                    <ChevronDown className="w-4 h-4" />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start" className="w-56 bg-white rounded-xl shadow-2xl border-none p-2">
+                    {link.children.map((child) => (
+                      <DropdownMenuItem key={child.name} asChild className="rounded-lg">
+                        <Link
+                          href={child.href}
+                          className="w-full font-semibold text-foreground/70 hover:text-accent cursor-pointer py-3"
+                        >
+                          {child.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="font-bold text-foreground/80 hover:text-accent transition-colors text-[13px] uppercase tracking-[0.15em]"
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
           <Button className="rounded-full px-8 h-12 font-bold shadow-xl hover:scale-105 transition-all bg-accent text-foreground hover:bg-accent/90 border-none">
@@ -71,17 +112,40 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b animate-fade-in p-10 shadow-2xl flex flex-col gap-6">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className="font-bold text-2xl text-foreground/80 hover:text-accent transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {link.name}
-            </Link>
-          ))}
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b animate-fade-in p-10 shadow-2xl flex flex-col gap-4">
+          <Accordion type="single" collapsible className="w-full">
+            {navLinks.map((link) => (
+              link.children ? (
+                <AccordionItem key={link.name} value={link.name} className="border-none">
+                  <AccordionTrigger className="font-bold text-2xl text-foreground/80 hover:text-accent py-2 hover:no-underline">
+                    {link.name}
+                  </AccordionTrigger>
+                  <AccordionContent className="flex flex-col gap-4 pl-4 pt-2">
+                    {link.children.map((child) => (
+                      <Link
+                        key={child.name}
+                        href={child.href}
+                        className="font-semibold text-xl text-foreground/60 hover:text-accent"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {child.name}
+                      </Link>
+                    ))}
+                  </AccordionContent>
+                </AccordionItem>
+              ) : (
+                <div key={link.name} className="py-2">
+                  <Link
+                    href={link.href}
+                    className="font-bold text-2xl text-foreground/80 hover:text-accent transition-colors"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                </div>
+              )
+            ))}
+          </Accordion>
           <Button className="rounded-full w-full py-8 text-xl font-bold shadow-xl bg-accent text-foreground mt-4">
             Donate Now
           </Button>
