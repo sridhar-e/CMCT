@@ -67,10 +67,10 @@ const About = () => {
           {/* Column 3: Impact & Funding */}
           <div className="space-y-8">
             <p className="text-muted-foreground text-[16px] font-medium leading-relaxed">
-              Almost every initiative from CMCT includes a training and education component. We strongly believe that by equipping the vulnerable with new skills, we empower them to lift themselves out of poverty and sustain their independence.
+              Almost every initiative from CMCT includes a training and education component. We strongly believe that by equipping the vulnerable with new skills, we empower them to lift themselves out of poverty and sustain their independence. We serve beneficiaries on a needs-basis irrespective of their caste, creed, or religious beliefs.
             </p>
             <p className="text-muted-foreground text-[16px] font-medium leading-relaxed">
-              We serve beneficiaries on a needs-basis irrespective of their caste, creed, or religious beliefs. CMCT does not receive government funding — our main source is the generous contributions of individual donors like you.
+              CMCT does not receive government funding. Our main source of funding is the generous contributions of individual donors like you. We are registered as a society under the Tamil Nadu Societies Act.
             </p>
           </div>
         </div>
