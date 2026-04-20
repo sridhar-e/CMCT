@@ -24,9 +24,15 @@ import {
 const Navbar = () => {
   const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     setMounted(true);
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const logo = PlaceHolderImages.find(img => img.id === 'app-logo');
@@ -51,12 +57,18 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        'absolute top-0 left-0 right-0 z-50 px-6 md:px-12 bg-transparent py-4'
+        'fixed top-0 left-0 right-0 z-50 px-6 md:px-12 transition-all duration-300 ease-in-out',
+        isScrolled 
+          ? 'bg-white/90 backdrop-blur-md shadow-md py-2' 
+          : 'bg-transparent py-4'
       )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center group relative z-10 mt-[-26px]">
-          <div className="relative w-[160px] h-[160px] group-hover:scale-105 transition-transform duration-500 overflow-hidden">
+      <div className="max-w-7xl mx-auto flex items-center justify-between h-20 md:h-24">
+        <Link href="/" className="flex items-center group relative z-10">
+          <div className={cn(
+            "relative transition-all duration-500 overflow-hidden",
+            isScrolled ? "w-[100px] h-[100px]" : "w-[160px] h-[160px] mt-[-26px]"
+          )}>
             <Image 
               src={logo?.imageUrl || '/cmct-logo.png'} 
               alt={logo?.description || 'CMCT Logo'} 
@@ -69,7 +81,10 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-10 mt-[-75px]">
+        <div className={cn(
+          "hidden lg:flex items-center gap-10 transition-all duration-300",
+          !isScrolled && "mt-[-75px]"
+        )}>
           <div className="flex items-center gap-8">
             {navLinks.map((link) => (
               link.children ? (
@@ -125,7 +140,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {mounted && mobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b animate-fade-in p-10 shadow-2xl flex flex-col gap-4">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b animate-fade-in p-10 shadow-2xl flex flex-col gap-4 max-h-[80vh] overflow-y-auto">
           <Accordion type="single" collapsible className="w-full">
             {navLinks.map((link) => (
               link.children ? (
