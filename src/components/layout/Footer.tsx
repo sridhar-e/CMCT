@@ -121,12 +121,16 @@ const Footer = () => {
               
               <div className="flex gap-3 items-center text-muted-foreground">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>044-69182300 / 044-69182340</span>
+                <div className="flex flex-wrap gap-x-2">
+                  <a href="tel:+914469182300" className="hover:text-primary transition-colors">044-69182300</a>
+                  <span className="opacity-50">/</span>
+                  <a href="tel:+914469182340" className="hover:text-primary transition-colors">044-69182340</a>
+                </div>
               </div>
               
               <div className="flex gap-3 items-center text-muted-foreground">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span className="hover:text-primary transition-colors cursor-pointer">info@cmctindia.in</span>
+                <a href="mailto:info@cmctindia.in" className="hover:text-primary transition-colors">info@cmctindia.in</a>
               </div>
             </div>
           </div>
@@ -136,11 +140,15 @@ const Footer = () => {
             <div className="space-y-4 text-sm">
               <div className="flex gap-3 items-center text-muted-foreground">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>044 69182355 / 9841277796</span>
+                <div className="flex flex-wrap gap-x-2">
+                  <a href="tel:+914469182355" className="hover:text-primary transition-colors">044 69182355</a>
+                  <span className="opacity-50">/</span>
+                  <a href="tel:+919841277796" className="hover:text-primary transition-colors">9841277796</a>
+                </div>
               </div>
               <div className="flex gap-3 items-center text-muted-foreground">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span className="hover:text-primary transition-colors cursor-pointer">cmctbethany@gmail.com</span>
+                <a href="mailto:cmctbethany@gmail.com" className="hover:text-primary transition-colors">cmctbethany@gmail.com</a>
               </div>
             </div>
           </div>
