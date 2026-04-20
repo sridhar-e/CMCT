@@ -67,7 +67,7 @@ const Navbar = () => {
         <Link href="/" className="flex items-center group relative z-10">
           <div className={cn(
             "relative transition-all duration-500 overflow-hidden",
-            isScrolled ? "w-[100px] h-[100px]" : "w-[160px] h-[160px] mt-[-26px]"
+            isScrolled ? "w-[100px] h-[100px]" : "w-[160px] h-[160px] mt-[10px]"
           )}>
             <Image 
               src={logo?.imageUrl || '/cmct-logo.png'} 
@@ -83,7 +83,7 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <div className={cn(
           "hidden lg:flex items-center gap-10 transition-all duration-300",
-          !isScrolled && "mt-[-75px]"
+          !isScrolled && "mt-[-50px]"
         )}>
           <div className="flex items-center gap-8">
             {navLinks.map((link) => (
