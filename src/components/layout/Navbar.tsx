@@ -82,7 +82,7 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <div className={cn(
           "hidden lg:flex items-center gap-10 transition-all duration-300",
-          !isScrolled && "mt-[-35px]"
+          !isScrolled && "mt-[-30px]"
         )}>
           <div className="flex items-center gap-8">
             {navLinks.map((link) => (
