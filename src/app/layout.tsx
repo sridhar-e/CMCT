@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import './globals.css';
+import { BackToTop } from '@/components/ui/back-to-top';
 
 export const metadata: Metadata = {
   title: 'CHRISTIAN MISSIONS CHARITABLE TRUST | CHILD EDUCATION | HEALTH CARE ORGANIZATIONS',
@@ -20,6 +21,7 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased bg-background text-foreground">
         {children}
+        <BackToTop />
       </body>
     </html>
   );
