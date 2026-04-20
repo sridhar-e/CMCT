@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -83,7 +82,7 @@ const Navbar = () => {
         {/* Desktop Nav */}
         <div className={cn(
           "hidden lg:flex items-center gap-10 transition-all duration-300",
-          !isScrolled && "mt-[-50px]"
+          !isScrolled && "mt-[-35px]"
         )}>
           <div className="flex items-center gap-8">
             {navLinks.map((link) => (
